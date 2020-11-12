@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng">
+<body>
+
+<div id="myDiv">
+    <p>Coffee</p>
+    <p>Tea</p>
+</div>
+
+
+
+<button onclick="myFunction()">add</button>
+<button onclick="myFunction1()">subtract</button>
+<button onclick="myFunction2()"></button>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var node = document.createElement("p");
+        var textnode = document.createTextNode("Water");
+        node.appendChild(textnode);
+        document.getElementById("myDiv").appendChild(node);
+        if (!(list.hasChildNodes())) {
+            alert("thats not allowed");
+        }
+    }
+    function myFunction1() {
+        const list = document.getElementById( "myDiv" );
+        if (list.hasChildNodes()){
+        list.removeChild(list.childNodes[0]);
+    }
+    }
+    function myFunction2() {
+        const {childElementCount} = document.getElementById( "myDiv" );
+        document.getElementById("demo").innerHTML = childElementCount;
+    }
+</script>
+
+
+</body>
+</html>
